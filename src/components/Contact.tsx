@@ -43,7 +43,7 @@ const Contact = () => {
             {contactMethods.map((method, index) => (
               <Card 
                 key={index}
-                className="animated-border p-6 text-center hover:scale-105 transition-transform duration-300 bg-card/50 backdrop-blur-sm"
+                className="animated-border p-6 text-center hover:scale-105 transition-transform duration-300 bg-card/80 backdrop-blur-sm"
               >
                 <method.icon className="h-10 w-10 text-primary mx-auto mb-4" />
                 <h3 className="font-semibold mb-2">{method.title}</h3>
@@ -59,7 +59,7 @@ const Contact = () => {
             ))}
           </div>
 
-          <Card className="animated-border p-8 bg-gradient-to-br from-card/50 to-secondary/20 backdrop-blur-sm text-center">
+          <Card className="animated-border p-8 bg-gradient-to-br from-card/80 to-secondary/30 backdrop-blur-sm text-center">
             <MessageSquare className="h-16 w-16 text-primary mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">Let's Work Together</h3>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
@@ -68,7 +68,7 @@ const Contact = () => {
             </p>
             <Button 
               size="lg"
-              className="bg-primary hover:bg-primary/90 glow-primary"
+              className="bg-primary hover:bg-primary/90"
               asChild
             >
               <a href="mailto:neilnath@example.com">

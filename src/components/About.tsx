@@ -24,7 +24,6 @@ const About = () => {
 
   return (
     <section className="py-20 relative overflow-hidden">
-      <AnimatedBeam />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <TextReveal 
@@ -41,7 +40,7 @@ const About = () => {
           {highlights.map((item, index) => (
             <Card 
               key={index}
-              className="animated-border p-6 hover:scale-105 transition-transform duration-300 bg-card/50 backdrop-blur-sm"
+              className="animated-border p-6 hover:scale-105 transition-transform duration-300 bg-card/80 backdrop-blur-sm"
             >
               <item.icon className="h-12 w-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
@@ -50,7 +49,7 @@ const About = () => {
           ))}
         </div>
 
-        <Card className="animated-border p-8 bg-card/50 backdrop-blur-sm">
+        <Card className="animated-border p-8 bg-card/80 backdrop-blur-sm">
           <h3 className="text-2xl font-bold mb-4 gradient-text">My Journey</h3>
           <p className="text-muted-foreground leading-relaxed">
             As a Computer Science student, I'm on an exciting journey of learning and building. 

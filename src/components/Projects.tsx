@@ -48,11 +48,10 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <CardTilt key={index}>
-              <MovingBorder>
-                <Card 
-                  className="group bg-card/80 backdrop-blur-sm overflow-hidden border-0 animate-glow-pulse"
-                >
-                  <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
+              <Card 
+                className="group bg-card/80 backdrop-blur-sm overflow-hidden border border-border/50 hover:border-primary/50 transition-all duration-300"
+              >
+                <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
               
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
@@ -98,7 +97,6 @@ const Projects = () => {
                 </div>
               </div>
             </Card>
-              </MovingBorder>
             </CardTilt>
           ))}
         </div>

@@ -1,9 +1,6 @@
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 import AnimatedGrid from "./AnimatedGrid";
-import Spotlight from "./Spotlight";
-import Sparkles from "./Sparkles";
-import AuroraBackground from "./AuroraBackground";
 import TypewriterEffect from "./TypewriterEffect";
 
 const Hero = () => {
@@ -13,14 +10,11 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <Sparkles />
-      <AuroraBackground />
       <AnimatedGrid />
-      <Spotlight />
       
-      {/* Gradient orbs */}
-      <div className="absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+      {/* Subtle gradient accents */}
+      <div className="absolute top-20 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="animate-float">
@@ -41,7 +35,7 @@ const Hero = () => {
         <div className="flex gap-4 justify-center mb-12">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 glow-primary transition-all hover:scale-105"
+            className="bg-primary hover:bg-primary/90 transition-all hover:scale-105"
             onClick={scrollToProjects}
           >
             View Projects
