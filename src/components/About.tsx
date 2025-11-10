@@ -1,5 +1,7 @@
 import { Card } from "./ui/card";
 import { Code2, Lightbulb, Rocket } from "lucide-react";
+import TextReveal from "./TextReveal";
+import AnimatedBeam from "./AnimatedBeam";
 
 const About = () => {
   const highlights = [
@@ -22,11 +24,13 @@ const About = () => {
 
   return (
     <section className="py-20 relative overflow-hidden">
+      <AnimatedBeam />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="gradient-text">Me</span>
-          </h2>
+          <TextReveal 
+            text="About Me"
+            className="text-4xl md:text-5xl font-bold mb-4"
+          />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A dedicated student pursuing BTech in Computer Science, passionate about creating 
             intuitive and responsive web applications

@@ -1,6 +1,7 @@
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Mail, Github, Linkedin, MessageSquare } from "lucide-react";
+import TextReveal from "./TextReveal";
 
 const Contact = () => {
   const contactMethods = [
@@ -28,9 +29,10 @@ const Contact = () => {
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
-          </h2>
+          <TextReveal 
+            text="Get In Touch"
+            className="text-4xl md:text-5xl font-bold mb-4"
+          />
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>

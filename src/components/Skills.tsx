@@ -1,5 +1,6 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
+import TextReveal from "./TextReveal";
 
 const Skills = () => {
   const skills = [
@@ -25,9 +26,10 @@ const Skills = () => {
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Tech <span className="gradient-text">Stack</span>
-          </h2>
+          <TextReveal 
+            text="Tech Stack"
+            className="text-4xl md:text-5xl font-bold mb-4"
+          />
           <p className="text-muted-foreground text-lg">
             Technologies I work with
           </p>

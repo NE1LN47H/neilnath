@@ -1,6 +1,10 @@
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { Button } from "./ui/button";
 import AnimatedGrid from "./AnimatedGrid";
+import Spotlight from "./Spotlight";
+import Sparkles from "./Sparkles";
+import AuroraBackground from "./AuroraBackground";
+import TypewriterEffect from "./TypewriterEffect";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -9,7 +13,10 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <Sparkles />
+      <AuroraBackground />
       <AnimatedGrid />
+      <Spotlight />
       
       {/* Gradient orbs */}
       <div className="absolute top-20 left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
@@ -20,9 +27,12 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Hi, I'm <span className="gradient-text">Neilnath</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Passionate Frontend Developer
-          </p>
+          <div className="text-xl md:text-2xl text-muted-foreground mb-4 min-h-[2em]">
+            <TypewriterEffect 
+              words={["Frontend Developer", "React Enthusiast", "UI/UX Designer", "Tech Explorer"]}
+              className="gradient-text font-semibold"
+            />
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             BTech Computer Science Student crafting beautiful web experiences with modern technologies
           </p>

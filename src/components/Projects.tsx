@@ -1,6 +1,9 @@
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import CardTilt from "./CardTilt";
+import MovingBorder from "./MovingBorder";
+import TextReveal from "./TextReveal";
 
 const Projects = () => {
   const projects = [
@@ -33,9 +36,10 @@ const Projects = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
-          </h2>
+          <TextReveal 
+            text="Featured Projects"
+            className="text-4xl md:text-5xl font-bold mb-4"
+          />
           <p className="text-muted-foreground text-lg">
             Some of my recent work
           </p>
@@ -43,11 +47,12 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card 
-              key={index}
-              className="animated-border group hover:scale-105 transition-all duration-300 bg-card/50 backdrop-blur-sm overflow-hidden"
-            >
-              <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
+            <CardTilt key={index}>
+              <MovingBorder>
+                <Card 
+                  className="group bg-card/80 backdrop-blur-sm overflow-hidden border-0 animate-glow-pulse"
+                >
+                  <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
               
               <div className="p-6">
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
@@ -93,6 +98,8 @@ const Projects = () => {
                 </div>
               </div>
             </Card>
+              </MovingBorder>
+            </CardTilt>
           ))}
         </div>
 
